@@ -1,16 +1,16 @@
 ---
 templateKey: index-page
 title: At the tip of a thought
-image: /img/home-jumbotron.jpg
-MegaTitle: At the tip of a thought
-MegaTitlex: Some MegaTitlex
+# image: /img/simon.jpg
+MegaTitle: At the tip 
+MegaTitleX: of a thought
 SubTitle: the subtitle
 TitleOne: the titleone
 ParaOne: jufihejfiurhego
 TitleTwo: title two
 ParaTwo: jfireogjoier fjeior gjeirog ho
 TitleThree: Title 33333
-ParaThree: jfiojrefoier 33 m ij ioj3 3hu3o3h o3
+ParaThree: jfiojrefoier 33 m feij ioj3 3hu3o3h o3
 # subheading: Support sustainable farming while enjoying a cup
 # mainpitch:
 #   title: Why Kaldi

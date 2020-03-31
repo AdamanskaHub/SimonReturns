@@ -7,28 +7,102 @@ import { Link, graphql } from 'gatsby'
 // import BlogRoll from '../components/BlogRoll'
 
 import "../../sass/main.scss"
+import img from "../img/simon.png"
 
 export const IndexPageTemplate = ({
-  image,
+  // image,
   title,
   MegaTitle,
+  MegaTitleX,
   SubTitle,
   TitleOne,
   ParaOne,
+  TitleTwo,
+  ParaTwo,
+  TitleThree,
+  ParaThree,
 }) => (
-  <div>
-    fjeiofhweuhfwiughwiughwruighi
+  <div className="container">
 
-  </div>
+      <div className="menu">
+        <h3>
+          <Link to="/">Home</Link>
+        </h3>
+        <h3>
+          <Link to="/blog/">Blog</Link>
+        </h3>
+      </div>
+
+      <section className="intro">
+        <div className="blob"></div>
+        <h1>
+          {MegaTitle}
+        </h1>
+        <h1>
+          {MegaTitleX}
+        </h1>
+        <p>{SubTitle}</p>
+      </section>
+
+      <section className="section sectiontwo">
+        <div className="portrait">
+          {/* <img src={data.image} alt="Simon" /> */}
+          {/* <img src="../static/img/simon.jpg" alt="Simon" /> */}
+          <img src={img} alt="Simon" />
+        </div>
+        <div>
+          <h2><span className="fancy">{TitleOne}</span></h2>
+          <p>{ParaOne}</p>
+          <h2><span className="fancy">{TitleTwo}</span></h2>
+          <p>{ParaTwo}</p>
+        </div>
+      </section>
+
+      <section className="section sectionthree">
+        <h2><span className="fancy">{TitleThree}</span></h2>
+        <p>{ParaThree}</p>
+        <div className="bubble bubble1"></div>
+        <div className="bubble bubble2"></div>
+        <div className="bubble bubble3"></div>
+        <div className="bubble bubble4"></div>
+        <div className="bubble bubble5"></div>
+        <div className="bubble bubble6"></div>
+        <div className="bubble bubble7"></div>
+        <div className="bubble bubble8"></div>
+      </section>s
+  
+    <section className="section sectionfour">
+        <h2><span className="fancy">Contact</span></h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Your Name:</label> <input type="text" name="name" />
+          </p>
+          <p>
+            <label>Your Email:</label> <input type="email" name="email" />
+          </p>
+          <p>
+            <label>Message:</label> <textarea name="message"></textarea>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </section>
+    </div>
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   MegaTitle: PropTypes.string,
+  MegaTitleX: PropTypes.string,
   SubTitle: PropTypes.string,
-  TitleOne: PropTypes.object,
+  TitleOne: PropTypes.string,
   ParaOne: PropTypes.string,
+  TitleTwo: PropTypes.string,
+  ParaTwo: PropTypes.string,
+  TitleThree: PropTypes.string,
+  ParaThree: PropTypes.string,
   // intro: PropTypes.shape({
   //   blurbs: PropTypes.array,
   // }),
@@ -40,12 +114,17 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <IndexPageTemplate
-        image={frontmatter.image}
+        // image={frontmatter.image}
         title={frontmatter.title}
         MegaTitle={frontmatter.MegaTitle}
+        MegaTitleX={frontmatter.MegaTitleX}
         SubTitle={frontmatter.SubTitle}
         TitleOne={frontmatter.TitleOne}
         ParaOne={frontmatter.ParaOne}
+        TitleTwo={frontmatter.TitleTwo}
+        ParaTwo={frontmatter.ParaTwo}
+        TitleThree={frontmatter.TitleThree}
+        ParaThree={frontmatter.ParaThree}
         // intro={frontmatter.intro}
       />
     </div>
@@ -67,17 +146,15 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         MegaTitle
+        MegaTitleX
         SubTitle
         TitleOne
         ParaOne
+        TitleTwo
+        ParaTwo
+        TitleThree
+        ParaThree
         
       }
     }
@@ -181,4 +258,16 @@ export const pageQuery = graphql`
         </div>
       </div>
     </section> 
-  </div>*/}
+  </div>
+  
+  // image {
+        //   childImageSharp {
+        //     fluid(maxWidth: 2048, quality: 100) {
+        //       ...GatsbyImageSharpFluid
+        //     }
+        //   }
+        // }
+  */
+
+
+}
