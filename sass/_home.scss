@@ -1,0 +1,372 @@
+.menu {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 4rem;
+
+    h3 {
+        margin-left: 2rem;
+        margin-bottom: 0;
+        font-size: 2rem;
+        font-family: 'Lato', sans-serif;
+
+        a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, .3);
+            transition: .5s;
+
+            &:hover {
+                color: rgba(255, 255, 255, .7);
+            }
+        }
+
+    }
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+}
+
+.intro {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, $bg-start 0%, $bg-end 100%);
+
+    .blob {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        border-radius: 30% 70% 70% 30% / 30% 47% 53% 70%;
+        background-color: rgba(255, 255, 255, .5);
+        mix-blend-mode: overlay;
+        z-index: 0;
+        transition: .4s ease;
+        animation: blobbing 14s infinite ease;
+    }
+
+    h1 {
+        font-size: 12rem;
+        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+        color: $text;
+        text-align: center;
+        max-width: 960px;
+        padding: 0 2rem;
+        transition: .4s ease;
+    }
+
+    @media only screen and (max-width: 800px) {
+        h1 {
+            font-size: 9rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        h1 {
+            font-size: 6rem;
+        }
+
+        .blob {
+            width: 320px;
+            height: 320px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin: .5rem;
+        }
+    }
+
+    p {
+        font-size: 2.4rem;
+        font-family: 'Lato', sans-serif;
+        color: rgba(255, 255, 255, .2);
+        margin-top: 2rem;
+        transition: .4s ease;
+    }
+}
+
+.fancy {
+    background-image: linear-gradient(90deg, #8545EC 0%, #6841E7 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 2.2rem;
+    background-position: 0 88%;
+    transition: background-size 0.25s
+}
+
+.section {
+    scroll-snap-align: start;
+    margin: 0 auto;
+    max-width: 960px;
+    min-height: 100vh;
+
+    h2 {
+        font-size: 4.2rem;
+
+        color: #fff;
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 2rem;
+        font-family: 'Lato', arial, sans-serif;
+        margin-block-end: 4rem;
+        line-height: normal;
+    }
+}
+
+.sectiontwo {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    align-items: center;
+    color: rgba(255, 255, 255, .8);
+    transition: .4s ease;
+
+    @media only screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    img {
+        border-radius: 50%;
+        max-height: 50vh;
+        transition: .4s ease;
+
+        @media only screen and (max-width: 800px) {
+            height: 80vw;
+            max-height: 320px;
+            margin-bottom: 4rem;
+        }
+    }
+
+
+}
+
+.sectionthree {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, .8);
+    position: relative;
+    background: linear-gradient(90deg, $bg-start 0%, $bg-end 100%);
+
+    p {
+        max-width: 960px;
+        transition: .4s ease;
+
+        @media only screen and (max-width: 800px) {
+            padding: 0 2rem;
+        }
+    }
+
+    .bubble {
+        mix-blend-mode: overlay;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .bubble1 {
+        width: 2rem;
+        height: 2rem;
+        background-color: rgba(255, 255, 255, .5);
+        left: 10%;
+        top: 10%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubbling 5s ease-in-out infinite;
+    }
+
+    .bubble2 {
+        width: 7rem;
+        height: 7rem;
+        background-color: rgba(255, 255, 255, .3);
+        left: 20%;
+        top: 30%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubblingmore 3.5s ease-in-out infinite;
+    }
+
+    .bubble3 {
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba(255, 255, 255, .3);
+        left: 24%;
+        top: 28%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubbling 5s ease-in-out infinite;
+    }
+
+    .bubble4 {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(255, 255, 255, .3);
+        left: 12%;
+        top: 65%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubblingmore 4.5s ease-in-out infinite;
+    }
+
+    .bubble5 {
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba(255, 255, 255, .3);
+        left: 50%;
+        top: 20%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubblingmore 3.5s ease-in-out infinite;
+    }
+
+    .bubble6 {
+        width: 8rem;
+        height: 8rem;
+        background-color: rgba(255, 255, 255, .3);
+        right: 20%;
+        top: 10%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubblingmore 3s ease-in-out infinite;
+    }
+
+    .bubble7 {
+        width: 6rem;
+        height: 6rem;
+        background-color: rgba(255, 255, 255, .3);
+        right: 18%;
+        top: 15%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubblingmore 5s ease-in-out infinite;
+    }
+
+    .bubble8 {
+        width: 6rem;
+        height: 6rem;
+        background-color: rgba(255, 255, 255, .3);
+        right: 15%;
+        top: 55%;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .05);
+        }
+
+        animation: bubbling 5s ease-in-out infinite;
+    }
+
+}
+
+.sectionfour {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        margin-block-start: 4rem;
+        min-width: 320px;
+        max-width: 500px;
+        padding: 0 2rem;
+        width: 100%;
+
+        p {
+            margin-block-end: 2rem;
+
+            label {
+                display: block;
+                padding-block-end: 1rem;
+                color: rgba(255, 255, 255, .7)
+            }
+
+            input,
+            textarea {
+                border: none;
+                color: #fff;
+                padding: 1rem;
+                width: 100%;
+                background-color: rgba(255, 255, 255, .25);
+                border: 1px rgba(0, 0, 0, 0) solid;
+
+                &:focus {
+                    outline: none;
+                    border: 1px #fff solid;
+                }
+            }
+
+            button {
+                text-align: center;
+                padding: 1rem 2rem;
+                text-transform: uppercase;
+                color: #fff;
+                background: linear-gradient(90deg, #A355EE 0%, #8650E9 100%);
+                justify-self: center;
+                align-self: center;
+                border: none;
+                transition: .5s ease;
+
+                &:focus {
+
+                    outline: none;
+                }
+
+                &:hover {
+                    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .3);
+                    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .3);
+                    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .3);
+
+                }
+            }
+
+        }
+    }
+}

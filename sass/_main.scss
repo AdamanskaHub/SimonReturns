@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display&display=swap');
+@import 'var';
+@import 'home';
+@import 'animations';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%;
+    /* defining rem 16/10*/
+    height:100%;
+}
+
+body {
+    height:100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, $bg-start 0%, $bg-end 100%);
+}
+
+.base {
+    padding: 3rem;
+    min-height: 100vh;
+    @media only screen and (max-width: 600px){
+        padding: 2rem;
+    }
+}
+
+
+.centered-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    max-width: 90vw;
+}
+
+.fixed-img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+}
+
+
