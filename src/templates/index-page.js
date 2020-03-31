@@ -2,20 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+// import Layout from '../components/Layout'
+// import Features from '../components/Features'
+// import BlogRoll from '../components/BlogRoll'
 
 import "../../sass/main.scss"
 
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  MegaTitle,
+  SubTitle,
+  TitleOne,
+  ParaOne,
 }) => (
   <div>
     fjeiofhweuhfwiughwiughwruighi
@@ -26,13 +25,13 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  MegaTitle: PropTypes.string,
+  SubTitle: PropTypes.string,
+  TitleOne: PropTypes.object,
+  ParaOne: PropTypes.string,
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
 }
 
 const IndexPage = ({ data }) => {
@@ -43,11 +42,11 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        MegaTitle={frontmatter.MegaTitle}
+        SubTitle={frontmatter.SubTitle}
+        TitleOne={frontmatter.TitleOne}
+        ParaOne={frontmatter.ParaOne}
+        // intro={frontmatter.intro}
       />
     </div>
   )
@@ -75,27 +74,11 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
+        MegaTitle
+        SubTitle
+        TitleOne
+        ParaOne
+        
       }
     }
   }
