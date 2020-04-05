@@ -33,7 +33,7 @@ collections:
       - file: "src/pages/index.md"
         label: "Simon"
         name: "home"
-        file: "content/home.md"
+        # file: "content/home.md"
         fields:
           - {label: MegaTitle, name: MegaTitle, widget: string}
           - {label: MegaTitleX, name: MegaTitleX, widget: string}

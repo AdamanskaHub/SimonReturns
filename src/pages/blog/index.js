@@ -1,11 +1,14 @@
 import React from 'react'
 
 import BlogRoll from '../../components/BlogRoll'
+import { Link, } from 'gatsby'
+
+import "../../../sass/main.scss"
 
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
       <div>
         {/* <div
           className="full-width-image-container margin-top-0"
@@ -13,7 +16,7 @@ export default class BlogIndexPage extends React.Component {
             backgroundImage: `url('/img/blog-index.jpg')`,
           }}
         > */}
-        <div className="menu">
+        <div className="menu menu-blog">
           <h3>
             <Link to="/">Home</Link>
           </h3>
@@ -21,25 +24,29 @@ export default class BlogIndexPage extends React.Component {
             <Link to="/blog/">Blog</Link>
           </h3>
         </div>
-        <h1
-        // className="has-text-weight-bold is-size-1"
-        // style={{
-        //   boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-        //   backgroundColor: '#f40',
-        //   color: 'white',
-        //   padding: '1rem',
-        // }}
-        >
-          Latest stories OOOOO
-        </h1>
+        
       </div>
-      <section className="section">
+      
+      {/* <section className="section">
         <div className="container">
-          <div className="content">
+          <div className="content"> */}
+          <section className="section sectionthree">
+          <h1 className="blog-title"
+          // className="has-text-weight-bold is-size-1"
+          // style={{
+          //   boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+          //   backgroundColor: '#f40',
+          //   color: 'white',
+          //   padding: '1rem',
+          // }}
+          >
+            BlogTitle
+          </h1>
             <BlogRoll />
-          </div>
+            </section>
+          {/* </div>
         </div>
-      </section>
+      </section> */}
       </div >
     )
   }
