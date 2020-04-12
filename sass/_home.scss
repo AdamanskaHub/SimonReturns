@@ -351,6 +351,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 320px;
+    width: 600px;
 
     form {
         margin-block-start: 4rem;
@@ -372,6 +374,7 @@
             textarea {
                 border: none;
                 color: #fff;
+                font-size: 16px;
                 padding: 1rem;
                 width: 100%;
                 background-color: rgba(255, 255, 255, .25);
@@ -385,8 +388,9 @@
 
             button {
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 2rem;
                 padding: 1rem 2rem;
+                font-family: 'Lato', sans-serif;
                 text-transform: uppercase;
                 color: #fff;
                 background: linear-gradient(90deg, #A355EE 0%, #8650E9 100%);

@@ -44,6 +44,7 @@ export const IndexPageTemplate = ({
         <p>{SubTitle}</p>
       </section>
 
+      <div className="center-me">
       <section className="section sectiontwo">
         <div className="portrait">
           {/* <img src={data.image} alt="Simon" /> */}
@@ -57,6 +58,8 @@ export const IndexPageTemplate = ({
           <p>{ParaTwo}</p>
         </div>
       </section>
+      </div>
+
 
       <section className="section sectionthree">
         <h2><span className="fancy">{TitleThree}</span></h2>
@@ -71,6 +74,7 @@ export const IndexPageTemplate = ({
         <div className="bubble bubble8"></div>
       </section>s
   
+      <div className="center-me">
     <section className="section sectionfour">
         <h2><span className="fancy">Contact</span></h2>
         <form name="contact" method="POST" data-netlify="true">
@@ -88,6 +92,7 @@ export const IndexPageTemplate = ({
           </p>
         </form>
       </section>
+      </div>
     </div>
 )
 

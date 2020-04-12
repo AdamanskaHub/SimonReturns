@@ -51,4 +51,9 @@ body {
     height: 80%;
 }
 
-
+.center-me{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
