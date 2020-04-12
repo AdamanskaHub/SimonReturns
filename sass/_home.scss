@@ -13,6 +13,7 @@
         margin-bottom: 0;
         font-size: 2rem;
         font-family: 'Lato', sans-serif;
+        font-weight: initial;
 
         a {
             text-decoration: none;
@@ -40,7 +41,7 @@
     max-width: 960px;
     padding: 0 2rem;
     margin-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 200px;
     transition: .4s ease;
 }
 
@@ -126,6 +127,7 @@
     margin: 0 auto;
     max-width: 960px;
     min-height: 100vh;
+    margin: 0 2rem;
 
     h2 {
         font-size: 4.2rem;
@@ -167,6 +169,7 @@
         // position: relative;
         // overflow: hidden;
         // border-radius: 50%;
+        // margin-left: 2rem;
     }
 
     img {
@@ -360,7 +363,7 @@
             margin-block-end: 2rem;
 
             label {
-                display: block;
+                // display: block;
                 padding-block-end: 1rem;
                 color: rgba(255, 255, 255, .7)
             }
@@ -382,6 +385,7 @@
 
             button {
                 text-align: center;
+                font-size: 1.5rem;
                 padding: 1rem 2rem;
                 text-transform: uppercase;
                 color: #fff;
@@ -404,6 +408,36 @@
                 }
             }
 
+        }
+    }
+}
+
+.blog {
+    max-width: 800px;
+    
+    
+
+    .blogpost{
+        margin-bottom: 100px;
+
+
+        .blogimg{
+            max-height: 300px;
+            overflow: hidden;
+            margin: 0 2rem;
+
+        }
+        h2 {
+            font-size: 3rem;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            line-height: 3.5rem;
+            margin: 1rem 0;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 1rem;
         }
     }
 }

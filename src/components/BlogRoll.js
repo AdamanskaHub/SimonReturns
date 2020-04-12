@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from "gatsby-image"
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 import "../../sass/main.scss"
@@ -12,53 +13,32 @@ class BlogRoll extends React.Component {
     // const { markdownRemark: post } = dataX
 
     return (
-      <div className="">
+      <div className="blog">
         {posts && posts.map(({ node: post }) => (
-            <div className="" key={post.id}>
+            <div className="blogpost" key={post.id}>
               <article 
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <h1>{post.frontmatter.title}</h1>
+                {post.frontmatter.featuredimage ? (
+                    <div className="blogimg">
+                      <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} alt={post.frontmatter.title} />
+                      {/* <PreviewCompatibleImage
+                        imageInfo={{
+                          image: post.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        }}
+                      /> */}
+                    </div>
+                  ) : null}
+                <h2><span className="fancy">{post.frontmatter.title}</span></h2>
+                <span>{post.frontmatter.date}</span>
                 <p>
                 {post.frontmatter.description}
                 </p>
-  {/*//               <header>
-  //                 {post.frontmatter.featuredimage ? (
-  //                   <div className="featured-thumbnail">
-  //                     <PreviewCompatibleImage
-  //                       imageInfo={{
-  //                         image: post.frontmatter.featuredimage,
-  //                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-  //                       }}
-  //                     />
-  //                   </div>
-  //                 ) : null}
-  //                 <p className="post-meta">
-  //                   <Link
-  //                     className="title has-text-primary is-size-4"
-  //                     to={post.fields.slug}
-  //                   >
-  //                     {post.frontmatter.title}
-  //                   </Link>
-  //                   <span> &bull; </span>
-  //                   <span className="subtitle is-size-5 is-block">
-  //                     {post.frontmatter.date}
-  //                   </span>
-  //                 </p>
-  //               </header>
-  //               <p>
-  //                 {post.excerpt}
-  //                 <br />
-  //                 <br />
-  //                 <Link className="button" to={post.fields.slug}>
-  //                   Keep Reading →
-  //                 </Link>
-  //               </p>
-  */}
-            //</article>
-          </div>
+              </article>
+            </div>
         ))}
       </div>
     )
@@ -124,3 +104,36 @@ export default () => (
 //     }
 //   }
 // }
+
+//               <header>
+  //                 {post.frontmatter.featuredimage ? (
+  //                   <div className="featured-thumbnail">
+  //                     <PreviewCompatibleImage
+  //                       imageInfo={{
+  //                         image: post.frontmatter.featuredimage,
+  //                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+  //                       }}
+  //                     />
+  //                   </div>
+  //                 ) : null}
+  //                 <p className="post-meta">
+  //                   <Link
+  //                     className="title has-text-primary is-size-4"
+  //                     to={post.fields.slug}
+  //                   >
+  //                     {post.frontmatter.title}
+  //                   </Link>
+  //                   <span> &bull; </span>
+  //                   <span className="subtitle is-size-5 is-block">
+  //                     {post.frontmatter.date}
+  //                   </span>
+  //                 </p>
+  //               </header>
+  //               <p>
+  //                 {post.excerpt}
+  //                 <br />
+  //                 <br />
+  //                 <Link className="button" to={post.fields.slug}>
+  //                   Keep Reading →
+  //                 </Link>
+  //               </p>
