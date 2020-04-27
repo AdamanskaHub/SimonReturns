@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Test of a timed post
-date: 2020-04-27T10:30:00.000Z
+date: 2020-04-27T10:35:00.000Z
 description: |-
   This is a new test of a timed post
   Lorem ipsum etc etc
