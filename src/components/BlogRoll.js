@@ -35,9 +35,14 @@ class BlogRoll extends React.Component {
                   ) : null}
                 <h2><span className="fancy">{post.frontmatter.title}</span></h2>
                 <span>{post.frontmatter.date}</span>
-                {post.frontmatter.description ? (<p>
-                {post.frontmatter.description}
-                </p>): (<p>hahaha</p>)}
+
+                {post.frontmatter.description ? 
+                (<p>{post.frontmatter.description}</p>)
+                : 
+                (<p>hahaha</p>)}
+                
+                {post.hmtl ? (<div setInnerHTML={post.html} />)
+                : <p>not dangerous</p>}
                 
               </article>
             </div>
