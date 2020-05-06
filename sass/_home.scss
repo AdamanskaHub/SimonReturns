@@ -437,11 +437,84 @@
             font-family: 'Playfair Display', serif;
             font-weight: 900;
             line-height: 3.5rem;
-            margin: 1rem 0;
+            margin: 1rem 0 0 0;
+            padding-bottom: 12px;
         }
         p {
             font-size: 16px;
             margin-top: 1rem;
+            margin-bottom: 1em;
         }
+    }
+}
+
+.keepreading{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #A355EE 0%, #8650E9 100%);
+    justify-self: center;
+    align-self: center;
+    border: none;
+    transition: .5s ease;
+
+    &:focus {
+
+        outline: none;
+    }
+
+    &:hover {
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .3);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .3);
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .3);
+
+    }
+}
+
+.blog-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        margin: 0 20px 100px;
+        color: #fff;
+
+
+        .blog-title{
+            margin: 200px 0 100px;
+        }
+        img{
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        margin-bottom: 2rem;
+        transition: .4s ease;
+        }
+        p {
+            font-size: 2rem;
+            font-family: 'Lato', arial, sans-serif;
+            line-height: normal;
+        }
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            color: #c49aff;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            line-height: 3.5rem;
+            margin: 2rem 0 0 0;
+            padding-bottom: 12px;
+        }
+        
     }
 }

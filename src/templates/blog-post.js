@@ -17,7 +17,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <div className="container blog-container">
       <div className="menu">
         <h3>
           <Link to="/">Home</Link>
@@ -26,15 +26,15 @@ export const BlogPostTemplate = ({
           <Link to="/blog/">Blog</Link>
         </h3>
       </div>
-      <div className="container content">
+      <section>
         <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+          <div className="">
+            <h1 className="blog-title">
               {title}
             </h1>
-            <p>{description}</p>
+            {/* <p>{description}</p> */}
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -45,11 +45,11 @@ export const BlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 

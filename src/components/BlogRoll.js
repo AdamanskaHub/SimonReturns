@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
-// Link, 
+import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -11,10 +10,10 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    // const { markdownRemark: post } = dataX
 
     return (
       <div className="blog">
+
         {posts && posts.map(({ node: post }) => (
             <div className="blogpost" key={post.id}>
               <article 
@@ -39,10 +38,11 @@ class BlogRoll extends React.Component {
                 {post.frontmatter.description ? 
                 (<p>{post.frontmatter.description}</p>)
                 : 
-                (<p>hahaha</p>)}
+                null}
                 
-                {post.hmtl ? (<div setInnerHTML={post.html} />)
-                : <p>not dangerous</p>}
+                <Link className="keepreading" to={post.fields.slug}>
+                    Keep Reading
+                  </Link>
                 
               </article>
             </div>
