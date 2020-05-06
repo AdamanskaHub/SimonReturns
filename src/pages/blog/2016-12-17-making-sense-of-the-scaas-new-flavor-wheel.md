@@ -2,13 +2,21 @@
 templateKey: blog-post
 title: Test of a timed post
 date: 2020-04-27T10:35:00.000Z
-description: This is the description
+description: |-
+  This is the description
+  bhjvbh
+
+  I skipped gzuf gfu
+  $huig izg ui
+  ui hiu
 featuredpost: false
 featuredimage: /img/products-grid3.jpg
 tags:
   - flavor
   - tasting
 ---
+This is my dangerously set html
+
 ![flavor wheel](/img/flavor_wheel.jpg)
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
