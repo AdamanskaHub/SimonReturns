@@ -1,10 +1,14 @@
 ---
 templateKey: blog-post
-title: A beginners’ guide to brewing with Chemex
+title: >-
+  This is technially the title (back-end) but used as the body. I can't jump
+  lines, so it's continuous text only. Not ideal to edit I realise. So copy-past
+  solutions only to be sure of the quality? Here's a link
+  https://www.frontiersin.org/articles/10.3389/fpsyg.2014.01551/full 
 date: 2017-01-04T15:04:10.000Z
-featuredpost: false
+description: empty description
+featuredpost: true
 featuredimage: /img/chemex.jpg
-description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - brewing
   - chemex
