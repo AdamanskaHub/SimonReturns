@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
+// Link, 
 import Img from "gatsby-image"
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -34,9 +35,10 @@ class BlogRoll extends React.Component {
                   ) : null}
                 <h2><span className="fancy">{post.frontmatter.title}</span></h2>
                 <span>{post.frontmatter.date}</span>
-                <p>
+                {post.frontmatter.description ? (<p>
                 {post.frontmatter.description}
-                </p>
+                </p>): (<p>hahaha</p>)}
+                
               </article>
             </div>
         ))}
@@ -71,6 +73,7 @@ export default () => (
               }
               frontmatter {
                 title
+                description
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
